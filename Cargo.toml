@@ -1,0 +1,23 @@
+[package]
+name = "rerecp"
+version = "0.1.0"
+edition = "2024"
+authors = ["jaegoomon"]
+description = "A high-performance, lightweight connection pool in Rust inspired by HikariCP"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+parking_lot = "0.12"
+
+crossbeam-utils = "0.8"
+
+crossbeam-queue = "0.3"
+
+thiserror = "2.0"
+
+tracing = "0.1"
+
+rand = "0.10"
+
+[dev-dependencies]
+tracing-subscriber = "0.3"

@@ -40,7 +40,9 @@ impl PoolConfig {
         if self.max_pool_size == 0 {
             return Err("max_pool_size must be greater than 0");
         }
-        if let Some(min_idle) = self.min_idle && min_idle > self.max_pool_size {
+        if let Some(min_idle) = self.min_idle
+            && min_idle > self.max_pool_size
+        {
             return Err("min_idle cannot be greater than max_pool_size");
         }
         if self.connection_timeout.is_zero() {
@@ -79,9 +81,15 @@ mod tests {
     #[test]
     fn test_validate() {
         let setting1 = PoolConfig::default().max_pool_size(0);
-        assert_eq!(setting1.validate(), Err("max_pool_size must be greater than 0"));
+        assert_eq!(
+            setting1.validate(),
+            Err("max_pool_size must be greater than 0")
+        );
 
         let setting2 = PoolConfig::default().connection_timeout(Duration::ZERO);
-        assert_eq!(setting2.validate(), Err("connection_timeout must be greater than 0"));
+        assert_eq!(
+            setting2.validate(),
+            Err("connection_timeout must be greater than 0")
+        );
     }
 }

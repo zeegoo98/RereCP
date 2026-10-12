@@ -37,7 +37,7 @@ mod tests {
         );
 
         let closed_err: PoolError<io::Error> = PoolError::PoolClosed;
-        assert_eq!(closed_err.to_string(), "connection pool has been closed")
+        assert_eq!(closed_err.to_string(), "connection pool has been closed");
     }
 
     #[test]

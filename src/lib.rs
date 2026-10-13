@@ -1,6 +1,7 @@
 pub mod config;
 pub mod connection;
 pub mod connection_mysql;
+pub mod entry;
 pub mod error;
 
 pub fn add(left: u64, right: u64) -> u64 {

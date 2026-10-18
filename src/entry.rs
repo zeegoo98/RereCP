@@ -48,7 +48,7 @@ impl<C> PoolEntry<C> {
 #[cfg(test)]
 mod tests {
     use std::{
-        sync::{atomic::AtomicUsize, Arc, Barrier},
+        sync::{Arc, Barrier, atomic::AtomicUsize},
         thread,
     };
 
